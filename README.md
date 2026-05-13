@@ -17,6 +17,10 @@ This project demonstrates the implementation and visualization of major CPU sche
 * Average Turnaround Time Calculation
 * Interactive GUI using Tkinter
 * Process Management and Reset Functionality
+* Flask-based REST API support
+* FCFS API endpoint with JSON request handling
+* Postman API testing
+
 
 ---
 
@@ -80,6 +84,64 @@ Processes with higher priority are executed first.
 * Clear All Functionality
 
 ---
+
+---
+
+## REST API Support
+
+The project includes a Flask-based REST API implementation for CPU scheduling algorithms.
+
+### Implemented Endpoint
+
+| Endpoint | Method | Description         |
+| -------- | ------ | ------------------- |
+| `/fcfs`  | POST   | Run FCFS Scheduling |
+
+---
+
+## Example JSON Request
+
+```json
+{
+    "processes": [
+        {
+            "pid": "P1",
+            "arrival_time": 0,
+            "burst_time": 5,
+            "priority": 1
+        },
+        {
+            "pid": "P2",
+            "arrival_time": 1,
+            "burst_time": 3,
+            "priority": 2
+        }
+    ]
+}
+```
+
+---
+
+## API Technologies Used
+
+* Flask
+* REST APIs
+* JSON
+* Postman
+
+---
+
+## Running the API Server
+
+```bash
+python -m api.app
+```
+
+The API runs locally on:
+
+```text
+http://127.0.0.1:5000
+```
 
 ## Performance Metrics
 
